@@ -10,10 +10,10 @@
               http://www.springframework.org/schema/context
               http://www.springframework.org/schema/context/spring-context-2.5.xsd">
 
-<bean class="dao.ProduitImplDataBase" id="sybawayDAO" init-method="init" ></bean>
+<bean class="DAO.ArticlelImpBDD" id="adil" init-method="init" ></bean>
 
-<bean class="services.ProduitImplMetier" id="sybawayServices">
-	<property name="dao" ref="sybawayDAO"  ></property>
+<bean class="SERVICE.ArticleImpMetie" id="tagguine">
+	<property name="dao" ref="adil"  ></property>
 </bean>
 
 

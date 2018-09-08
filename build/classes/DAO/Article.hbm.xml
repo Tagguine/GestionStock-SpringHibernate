@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+<class name="DAO.Article" table="ARTICLE" >
+
+	<id name="idArticle" column="idArticle"  >
+		<generator class="native"></generator>
+	</id>
+	
+	<property name="nom" column="nom"></property>
+	<property name="description" column="description"></property>
+	<property name="prix" column="prix"></property>
+
+	
+
+
+</class>
+ 
+  
+</hibernate-mapping>

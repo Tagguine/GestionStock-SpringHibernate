@@ -6,6 +6,11 @@ import java.util.List;
 public class ArticleImp implements ArticleDAO{
 
 	private List<Article> article = new ArrayList<Article>();
+	
+	public void init(){
+		System.out.println("ça marche");
+	}
+	
 	@Override
 	public void addArticle(Article a) {
 		// TODO Auto-generated method stub
@@ -16,13 +21,26 @@ public class ArticleImp implements ArticleDAO{
 	@Override
 	public void deleteArticle(Long id) {
 		// TODO Auto-generated method stub
-		
+		for(Article a:article) {
+			if(a.getIdArticle().equals(id)) {
+				article.remove(a);
+			}
+		}
 	}
 
 	@Override
 	public Article getArticle(Long id) {
 		// TODO Auto-generated method stub
-		return null;
+		Article art = null;
+		for(Article a:article) {
+			if(a.getIdArticle().equals(id)) {
+				art = a;
+				break;
+			}
+		}
+	
+		
+		return art;
 	}
 
 	@Override
@@ -35,6 +53,14 @@ public class ArticleImp implements ArticleDAO{
 	public void updateArticle(Article a) {
 		// TODO Auto-generated method stub
 		
+	}
+
+	public List<Article> getArticle() {
+		return article;
+	}
+
+	public void setArticle(List<Article> article) {
+		this.article = article;
 	}
 
 }
